@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:styles": "npx tailwindcss -i created-form-lib/src/css/created.css -o ./styles/created.css",
     "start": "next start",
     "lint": "next lint"
   },
