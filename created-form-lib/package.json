@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "name": "created-component-lib",
   "author": "devinreeks",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build:static": "esbuild src/index.tsx --bundle --outfile=public/bundle.js",
+    "build:static": "esbuild src/index.ts --bundle --outfile=public/bundle.js",
     "build:styles": "npx tailwindcss -i ./src/css/created.css -o ./public/created.css",
     "tsc": "tsc"
   },
