@@ -5,6 +5,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
+    "public",
     "src"
   ],
   "engines": {
@@ -12,6 +13,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
+    "build:all": "yarn build && yarn build:static && yarn build:styles",
     "build": "tsdx build",
     "build:static": "esbuild src/index.tsx --bundle --outfile=public/bundle.js",
     "build:styles": "npx tailwindcss -i src/css/created.css -o ./public/created.css",

@@ -1,4 +1,4 @@
-import TitleField from './TitleField';
+import TitleField from '../components/TitleField';
 
 const el = React.createElement;
 
@@ -11,11 +11,11 @@ const elementContainer = document.querySelector('#form_container') as HTMLElemen
 const testProps = JSON.parse(elementContainer.getAttribute('props') as string);
 
 
-const Wrapper = ({title}: TestProps) => {
+const App = ({title}: TestProps) => {
     return <TitleField title={title} />;
 };
-export default Wrapper;
+export default App;
 
-// @ts-ignore
+
 const rootEl = ReactDOM.createRoot(elementContainer);
-rootEl.render(el(Wrapper, testProps));
+rootEl.render(el(App, testProps));
