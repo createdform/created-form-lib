@@ -2,7 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import TitleField from '../created-form-lib/src/components/TitleField';
+import {TitleField} from 'created-forms-components';
+
+
+
+
 
 const Home: NextPage = () => {
   return (

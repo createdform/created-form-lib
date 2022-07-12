@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@created/created-forms-lib": "file:./created-form-lib",
+    "created-forms-components": "^1.0.0",
     "next": "12.2.2",
     "next-transpile-modules": "^9.0.0",
     "react": "18.2.0",
