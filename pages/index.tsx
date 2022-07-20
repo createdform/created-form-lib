@@ -1,11 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import {TitleField} from 'created-forms-components';
-
-
-
 
 
 const Home: NextPage = () => {
@@ -18,7 +13,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <TitleField title="This is the first component"/>
+        <iframe src="my-form.html" className={styles.iframe}>
+        </iframe>
       </main>
     </div>
   )

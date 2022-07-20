@@ -1819,28 +1819,156 @@
     }
   });
 
-  // src/components/TitleField.tsx
-  var import_react = __toESM(require_react());
-  var TitleField = ({ title = "hello" }) => {
-    return /* @__PURE__ */ import_react.default.createElement("h1", {
-      className: "text-red-500"
-    }, title);
+  // src/components/utilities/WrappedFormItem.tsx
+  var WrappedFormItem = ({ children }) => {
+    return /* @__PURE__ */ React.createElement("div", {
+      className: "w-full bg-white border-2 border-gray-200 rounded-lg my-2"
+    }, /* @__PURE__ */ React.createElement("div", {
+      className: "flex justify-between pb-4 pt-4 pl-4"
+    }, /* @__PURE__ */ React.createElement("div", {
+      className: "flex-col hover:cursor-pointer"
+    }, /* @__PURE__ */ React.createElement("svg", {
+      width: "24",
+      height: "24",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /* @__PURE__ */ React.createElement("path", {
+      d: "M15.375 12C15.375 13.8656 13.8656 15.375 12 15.375C10.1344 15.375 8.625 13.8656 8.625 12C8.625 10.1344 10.1344 8.625 12 8.625C13.8656 8.625 15.375 10.1344 15.375 12ZM20.25 8.625C18.3844 8.625 16.875 10.1344 16.875 12C16.875 13.8656 18.3844 15.375 20.25 15.375C22.1156 15.375 23.625 13.8656 23.625 12C23.625 10.1344 22.1156 8.625 20.25 8.625ZM3.75 8.625C1.88438 8.625 0.375 10.1344 0.375 12C0.375 13.8656 1.88438 15.375 3.75 15.375C5.61562 15.375 7.125 13.8656 7.125 12C7.125 10.1344 5.61562 8.625 3.75 8.625Z",
+      fill: "#959ba5"
+    }))), /* @__PURE__ */ React.createElement("div", {
+      className: "flex-col"
+    }, /* @__PURE__ */ React.createElement("div", {
+      className: "flex mr-4"
+    }, /* @__PURE__ */ React.createElement("svg", {
+      className: "mr-4 hover:cursor-pointer",
+      width: "21",
+      height: "23",
+      viewBox: "0 0 21 23",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /* @__PURE__ */ React.createElement("path", {
+      d: "M19.2842 12.2589C19.1129 12.0491 19.0184 11.7793 19.0184 11.5C19.0184 11.2207 19.1129 10.9509 19.2842 10.7411L20.6522 9.08533C20.803 8.90442 20.8966 8.67679 20.9196 8.4351C20.9426 8.19341 20.8939 7.95007 20.7805 7.74001L18.6429 3.76155C18.5306 3.55173 18.3596 3.38541 18.1542 3.28631C17.9489 3.1872 17.7197 3.16037 17.4994 3.20963L15.4901 3.64657C15.2344 3.7034 14.9683 3.65759 14.7418 3.51779C14.5154 3.37798 14.3444 3.15384 14.261 2.88767L13.6091 0.783457C13.5374 0.555074 13.4008 0.35671 13.2186 0.216403C13.0364 0.0760954 12.8178 0.000941488 12.5937 0.00156374H8.31867C8.08561 -0.0115238 7.85497 0.0578214 7.66199 0.199008C7.469 0.340195 7.32427 0.545462 7.24991 0.783457L6.6514 2.88767C6.56804 3.15384 6.39701 3.37798 6.17058 3.51779C5.94415 3.65759 5.67799 3.7034 5.42232 3.64657L3.35961 3.20963C3.15072 3.17787 2.93777 3.21333 2.74758 3.31155C2.55739 3.40977 2.39847 3.56634 2.29084 3.76155L0.153315 7.74001C0.036991 7.94773 -0.0153121 8.1897 0.0038834 8.43132C0.0230789 8.67295 0.11279 8.90186 0.260192 9.08533L1.61752 10.7411C1.78887 10.9509 1.88336 11.2207 1.88336 11.5C1.88336 11.7793 1.78887 12.0491 1.61752 12.2589L0.260192 13.9147C0.11279 14.0981 0.0230789 14.327 0.0038834 14.5687C-0.0153121 14.8103 0.036991 15.0523 0.153315 15.26L2.29084 19.2384C2.40317 19.4483 2.57419 19.6146 2.77954 19.7137C2.98488 19.8128 3.21407 19.8396 3.43442 19.7904L5.4437 19.3534C5.69936 19.2966 5.96553 19.3424 6.19195 19.4822C6.41838 19.622 6.58941 19.8462 6.67278 20.1123L7.32472 22.2165C7.39909 22.4545 7.54381 22.6598 7.7368 22.801C7.92979 22.9422 8.16043 23.0115 8.39349 22.9984H12.6685C12.8926 22.9991 13.1112 22.9239 13.2934 22.7836C13.4756 22.6433 13.6122 22.4449 13.6839 22.2165L14.3358 20.1123C14.4192 19.8462 14.5902 19.622 14.8166 19.4822C15.0431 19.3424 15.3092 19.2966 15.5649 19.3534L17.5742 19.7904C17.7945 19.8396 18.0237 19.8128 18.2291 19.7137C18.4344 19.6146 18.6054 19.4483 18.7178 19.2384L20.8553 15.26C20.9688 15.0499 21.0175 14.8066 20.9944 14.5649C20.9714 14.3232 20.8778 14.0956 20.727 13.9147L19.2842 12.2589ZM17.6917 13.7997L18.5467 14.8345L17.1787 17.3872L15.9176 17.1112C15.1478 16.942 14.3471 17.0826 13.6674 17.5066C12.9877 17.9305 12.4763 18.6081 12.2304 19.4109L11.8242 20.6987H9.08818L8.70343 19.3879C8.45746 18.5852 7.94608 17.9075 7.26637 17.4836C6.58666 17.0596 5.78594 16.919 5.01619 17.0882L3.75505 17.3642L2.36566 14.823L3.22067 13.7882C3.74645 13.1557 4.03713 12.337 4.03713 11.4885C4.03713 10.64 3.74645 9.82125 3.22067 9.18881L2.36566 8.15395L3.73368 5.6243L4.99482 5.90026C5.76456 6.06954 6.56529 5.92887 7.245 5.50494C7.92471 5.08102 8.43608 4.40335 8.68205 3.60057L9.08818 2.30125H11.8242L12.2304 3.61207C12.4763 4.41485 12.9877 5.09251 13.6674 5.51644C14.3471 5.94037 15.1478 6.08104 15.9176 5.91176L17.1787 5.6358L18.5467 8.18845L17.6917 9.22331C17.1719 9.8543 16.8848 10.6683 16.8848 11.5115C16.8848 12.3547 17.1719 13.1687 17.6917 13.7997V13.7997ZM10.4562 6.90063C9.61068 6.90063 8.78414 7.17037 8.08111 7.67576C7.37808 8.18115 6.83013 8.89947 6.50656 9.73989C6.183 10.5803 6.09834 11.5051 6.26329 12.3973C6.42824 13.2895 6.8354 14.109 7.43328 14.7522C8.03116 15.3955 8.7929 15.8335 9.62218 16.011C10.4515 16.1885 11.311 16.0974 12.0922 15.7493C12.8734 15.4012 13.541 14.8116 14.0108 14.0553C14.4805 13.2989 14.7313 12.4097 14.7313 11.5C14.7313 10.2802 14.2809 9.1103 13.4791 8.24775C12.6774 7.3852 11.59 6.90063 10.4562 6.90063V6.90063ZM10.4562 13.7997C10.0334 13.7997 9.62017 13.6648 9.26865 13.4121C8.91714 13.1594 8.64317 12.8003 8.48138 12.3801C8.3196 11.9598 8.27727 11.4974 8.35975 11.0514C8.44222 10.6053 8.6458 10.1955 8.94474 9.87388C9.24368 9.55226 9.62455 9.33323 10.0392 9.2445C10.4538 9.15577 10.8836 9.20131 11.2742 9.37537C11.6648 9.54942 11.9986 9.84418 12.2335 10.2224C12.4684 10.6005 12.5937 11.0452 12.5937 11.5C12.5937 12.1099 12.3685 12.6948 11.9677 13.1261C11.5668 13.5574 11.0231 13.7997 10.4562 13.7997Z",
+      fill: "#AAAAAA"
+    })), /* @__PURE__ */ React.createElement("svg", {
+      className: "hover:cursor-pointer",
+      width: "18",
+      height: "23",
+      viewBox: "0 0 18 23",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /* @__PURE__ */ React.createElement("path", {
+      d: "M17 4.6H13V3.45C13 2.535 12.6839 1.65748 12.1213 1.01048C11.5587 0.363481 10.7956 0 10 0H8C7.20435 0 6.44129 0.363481 5.87868 1.01048C5.31607 1.65748 5 2.535 5 3.45V4.6H1C0.734784 4.6 0.48043 4.72116 0.292893 4.93683C0.105357 5.15249 0 5.445 0 5.75C0 6.055 0.105357 6.34751 0.292893 6.56317C0.48043 6.77884 0.734784 6.9 1 6.9H2V19.55C2 20.465 2.31607 21.3425 2.87868 21.9895C3.44129 22.6365 4.20435 23 5 23H13C13.7956 23 14.5587 22.6365 15.1213 21.9895C15.6839 21.3425 16 20.465 16 19.55V6.9H17C17.2652 6.9 17.5196 6.77884 17.7071 6.56317C17.8946 6.34751 18 6.055 18 5.75C18 5.445 17.8946 5.15249 17.7071 4.93683C17.5196 4.72116 17.2652 4.6 17 4.6ZM7 3.45C7 3.145 7.10536 2.85249 7.29289 2.63683C7.48043 2.42116 7.73478 2.3 8 2.3H10C10.2652 2.3 10.5196 2.42116 10.7071 2.63683C10.8946 2.85249 11 3.145 11 3.45V4.6H7V3.45ZM14 19.55C14 19.855 13.8946 20.1475 13.7071 20.3632C13.5196 20.5788 13.2652 20.7 13 20.7H5C4.73478 20.7 4.48043 20.5788 4.29289 20.3632C4.10536 20.1475 4 19.855 4 19.55V6.9H14V19.55Z",
+      fill: "#AAAAAA"
+    }))))), /* @__PURE__ */ React.createElement("div", {
+      className: "p-4"
+    }, children));
   };
-  var TitleField_default = TitleField;
+  var WrappedFormItem_default = WrappedFormItem;
 
-  // src/components/Wrapper.tsx
-  var import_react2 = __toESM(require_react());
-  var el = import_react2.default.createElement;
-  var elementContainer = document.querySelector("#form_container");
-  var testProps = JSON.parse(elementContainer.getAttribute("props"));
-  var Wrapper = ({ title }) => {
-    return /* @__PURE__ */ import_react2.default.createElement(TitleField_default, {
-      title
-    });
+  // src/components/ShortAnswerInput.tsx
+  var ShortAnswerInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+    className: "mb-2"
+  }, /* @__PURE__ */ React.createElement("label", {
+    htmlFor: field.id,
+    className: "font-bold"
+  }, field.fieldName)), /* @__PURE__ */ React.createElement("textarea", {
+    placeholder: field.placeholderText,
+    className: "w-full border border-gray-200 rounded p-2"
+  }), /* @__PURE__ */ React.createElement("div", null, field.fieldHint));
+
+  // src/components/BooleanInput.tsx
+  var BooleanInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("input", {
+    type: "radio",
+    placeholder: field.placeholderText
+  }));
+
+  // src/components/NumberInput.tsx
+  var NumberInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+    className: "mb-2"
+  }, /* @__PURE__ */ React.createElement("label", {
+    htmlFor: field.id,
+    className: "font-bold"
+  }, field.fieldName)), /* @__PURE__ */ React.createElement("input", {
+    type: "number",
+    id: field.id,
+    placeholder: field.placeholderText,
+    className: "w-full border border-gray-200 rounded p-2"
+  }));
+
+  // src/components/TextField.tsx
+  var TextFieldInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+    className: "mb-2"
+  }, /* @__PURE__ */ React.createElement("label", {
+    htmlFor: field.id,
+    className: "font-bold"
+  }, field.fieldName)), /* @__PURE__ */ React.createElement("input", {
+    type: "text",
+    placeholder: field.placeholderText,
+    className: "w-full border border-gray-200 rounded p-2"
+  }), /* @__PURE__ */ React.createElement("div", null, field.fieldHint));
+
+  // src/page/FieldBuilder.tsx
+  var FieldBuilder = (field) => {
+    if (field) {
+      switch (field.fieldType) {
+        case "boolean" /* boolean */:
+          return BooleanInput(field);
+        case "dropdown" /* dropdown */:
+          break;
+        case "textfield" /* textfield */:
+          return TextFieldInput(field);
+        case "ShortAnswer" /* shortAnswer */:
+          return ShortAnswerInput(field);
+        case "number" /* number */:
+          return NumberInput(field);
+        case "StarRating" /* starRating */:
+          break;
+        default:
+          return NumberInput(field);
+      }
+    }
+    return /* @__PURE__ */ React.createElement(React.Fragment, null);
   };
-  var Wrapper_default = Wrapper;
+  var FieldBuilder_default = FieldBuilder;
+
+  // src/page/App.tsx
+  var import_react = __toESM(require_react());
+
+  // src/components/utilities/WrappedForm.tsx
+  var WrappedForm = ({ children }) => {
+    return /* @__PURE__ */ React.createElement("div", {
+      className: "p-8 h-screen bg-orange-300"
+    }, children);
+  };
+  var WrappedForm_default = WrappedForm;
+
+  // src/page/App.tsx
+  var el = import_react.default.createElement;
+  var FieldTypes = /* @__PURE__ */ ((FieldTypes2) => {
+    FieldTypes2["number"] = "number";
+    FieldTypes2["dropdown"] = "dropdown";
+    FieldTypes2["boolean"] = "boolean";
+    FieldTypes2["shortAnswer"] = "ShortAnswer";
+    FieldTypes2["starRating"] = "StarRating";
+    FieldTypes2["textfield"] = "textfield";
+    return FieldTypes2;
+  })(FieldTypes || {});
+  var elementContainer = document.querySelector("#form_container");
+  var Props = JSON.parse(elementContainer.getAttribute("props"));
+  var App = ({ form }) => {
+    console.log(form);
+    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "bg-orange-300 text-center max-w-2xl mx-auto"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", {
+      className: "text-3xl md:text-4xl font-medium"
+    }, form[0].formName)), form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
+      ...fields
+    })))));
+  };
+  var App_default = App;
   var rootEl = ReactDOM.createRoot(elementContainer);
-  rootEl.render(el(Wrapper, testProps));
+  rootEl.render(el(App, Props));
 })();
 /**
  * @license React
