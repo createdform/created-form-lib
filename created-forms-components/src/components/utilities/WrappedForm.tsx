@@ -6,8 +6,11 @@ type Props = {
 
 
 const WrappedForm: FC<Props> = ({children}: Props) => {
-    return (<div className="p-8 h-screen bg-orange-300">
-                {children}
+    return (<div className="p-8 h-screen bg-orange-500">
+                <form method="post" action="http://localhost:3000/api/submission/create">
+                    {children}
+                    <button type="submit">Submit</button>
+                </form>
             </div>
     )
 }

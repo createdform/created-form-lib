@@ -32,7 +32,7 @@ const elementContainer = document.querySelector('#form_container') as HTMLElemen
 const Props = JSON.parse(elementContainer.getAttribute('props') as string);
 
 const App = ({form}: AppProps) => {
-    console.log(form)
+    console.log(form);
     return (
         <>
             <WrappedForm>
@@ -41,7 +41,6 @@ const App = ({form}: AppProps) => {
                         {form[0].formName}
                     </h1>
                 </div>
-
                 {form.map((fields) => <div><FieldBuilder {...fields} /></div>)}
             </WrappedForm>
 
