@@ -3,7 +3,7 @@ import {FormBuilderValues} from '../page/App';
 
 export const NumberInput = (field: FormBuilderValues) => {
 
-    return <WrappedFormItem>
+    return <WrappedFormItem builder={field.showBuilder}>
         <div className="mb-2">
             <label htmlFor={field.id} className="font-bold">{field.fieldName}</label>
         </div>

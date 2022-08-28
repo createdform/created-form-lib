@@ -1820,10 +1820,10 @@
   });
 
   // src/components/utilities/WrappedFormItem.tsx
-  var WrappedFormItem = ({ children }) => {
+  var WrappedFormItem = ({ children, builder }) => {
     return /* @__PURE__ */ React.createElement("div", {
       className: "w-full bg-white border-2 border-gray-200 rounded-lg my-2"
-    }, /* @__PURE__ */ React.createElement("div", {
+    }, builder ? /* @__PURE__ */ React.createElement("div", {
       className: "flex justify-between pb-4 pt-4 pl-4"
     }, /* @__PURE__ */ React.createElement("div", {
       className: "flex-col hover:cursor-pointer"
@@ -1860,14 +1860,16 @@
     }, /* @__PURE__ */ React.createElement("path", {
       d: "M17 4.6H13V3.45C13 2.535 12.6839 1.65748 12.1213 1.01048C11.5587 0.363481 10.7956 0 10 0H8C7.20435 0 6.44129 0.363481 5.87868 1.01048C5.31607 1.65748 5 2.535 5 3.45V4.6H1C0.734784 4.6 0.48043 4.72116 0.292893 4.93683C0.105357 5.15249 0 5.445 0 5.75C0 6.055 0.105357 6.34751 0.292893 6.56317C0.48043 6.77884 0.734784 6.9 1 6.9H2V19.55C2 20.465 2.31607 21.3425 2.87868 21.9895C3.44129 22.6365 4.20435 23 5 23H13C13.7956 23 14.5587 22.6365 15.1213 21.9895C15.6839 21.3425 16 20.465 16 19.55V6.9H17C17.2652 6.9 17.5196 6.77884 17.7071 6.56317C17.8946 6.34751 18 6.055 18 5.75C18 5.445 17.8946 5.15249 17.7071 4.93683C17.5196 4.72116 17.2652 4.6 17 4.6ZM7 3.45C7 3.145 7.10536 2.85249 7.29289 2.63683C7.48043 2.42116 7.73478 2.3 8 2.3H10C10.2652 2.3 10.5196 2.42116 10.7071 2.63683C10.8946 2.85249 11 3.145 11 3.45V4.6H7V3.45ZM14 19.55C14 19.855 13.8946 20.1475 13.7071 20.3632C13.5196 20.5788 13.2652 20.7 13 20.7H5C4.73478 20.7 4.48043 20.5788 4.29289 20.3632C4.10536 20.1475 4 19.855 4 19.55V6.9H14V19.55Z",
       fill: "#AAAAAA"
-    }))))), /* @__PURE__ */ React.createElement("div", {
+    }))))) : null, /* @__PURE__ */ React.createElement("div", {
       className: "p-4"
     }, children));
   };
   var WrappedFormItem_default = WrappedFormItem;
 
   // src/components/ShortAnswerInput.tsx
-  var ShortAnswerInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+  var ShortAnswerInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, {
+    builder: field.showBuilder
+  }, /* @__PURE__ */ React.createElement("div", {
     className: "mb-2"
   }, /* @__PURE__ */ React.createElement("label", {
     htmlFor: field.id,
@@ -1879,14 +1881,18 @@
   }), /* @__PURE__ */ React.createElement("div", null, field.fieldHint));
 
   // src/components/BooleanInput.tsx
-  var BooleanInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("input", {
+  var BooleanInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, {
+    builder: field.showBuilder
+  }, /* @__PURE__ */ React.createElement("input", {
     type: "radio",
     placeholder: field.placeholderText
   }));
 
   // src/components/NumberInput.tsx
   var NumberInput = (field) => {
-    return /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+    return /* @__PURE__ */ React.createElement(WrappedFormItem_default, {
+      builder: field.showBuilder
+    }, /* @__PURE__ */ React.createElement("div", {
       className: "mb-2"
     }, /* @__PURE__ */ React.createElement("label", {
       htmlFor: field.id,
@@ -1901,7 +1907,9 @@
   };
 
   // src/components/TextField.tsx
-  var TextFieldInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, null, /* @__PURE__ */ React.createElement("div", {
+  var TextFieldInput = (field) => /* @__PURE__ */ React.createElement(WrappedFormItem_default, {
+    builder: field.showBuilder
+  }, /* @__PURE__ */ React.createElement("div", {
     className: "mb-2"
   }, /* @__PURE__ */ React.createElement("label", {
     htmlFor: field.id,
@@ -1943,13 +1951,16 @@
   // src/components/utilities/WrappedForm.tsx
   var WrappedForm = ({ children }) => {
     return /* @__PURE__ */ React.createElement("div", {
-      className: "p-8 h-screen bg-orange-500"
+      className: "p-8 h-screen bg-orange-200"
     }, /* @__PURE__ */ React.createElement("form", {
       method: "post",
       action: "http://localhost:3000/api/submission/create"
-    }, children, /* @__PURE__ */ React.createElement("button", {
-      type: "submit"
-    }, "Submit")));
+    }, children, /* @__PURE__ */ React.createElement("div", {
+      className: "bg-white p-4 rounded flex justify-center w-full"
+    }, /* @__PURE__ */ React.createElement("button", {
+      type: "submit",
+      className: "bg-blue-500 hover:bg-blue-300 text-white p-2 px-6 rounded"
+    }, "Submit"))));
   };
   var WrappedForm_default = WrappedForm;
 
@@ -1967,12 +1978,9 @@
   var elementContainer = document.querySelector("#form_container");
   var Props = JSON.parse(elementContainer.getAttribute("props"));
   var App = ({ form }) => {
-    console.log(form);
-    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("div", {
-      className: "bg-orange-300 text-center max-w-2xl mx-auto"
-    }, /* @__PURE__ */ import_react.default.createElement("h1", {
-      className: "text-3xl md:text-4xl font-medium"
-    }, form[0].formName), /* @__PURE__ */ import_react.default.createElement("h4", null, "Dingus")), form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
+    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
+      className: "font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center"
+    }, form[0].formName), form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
       ...fields
     })))));
   };

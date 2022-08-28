@@ -2,7 +2,7 @@ import WrappedFormItem from './utilities/WrappedFormItem';
 import {FormBuilderValues} from '../page/App';
 
 export const TextFieldInput = (field:  FormBuilderValues) => (
-    <WrappedFormItem>
+    <WrappedFormItem builder={field.showBuilder}>
         <div className="mb-2">
             <label htmlFor={field.id} className="font-bold">{field.fieldName}</label>
         </div>

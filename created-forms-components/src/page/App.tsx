@@ -32,15 +32,12 @@ const elementContainer = document.querySelector('#form_container') as HTMLElemen
 const Props = JSON.parse(elementContainer.getAttribute('props') as string);
 
 const App = ({form}: AppProps) => {
-    console.log(form);
     return (
         <>
             <WrappedForm>
-                <div className="bg-orange-300 text-center max-w-2xl mx-auto">
-                    <h1 className="text-3xl md:text-4xl font-medium">
+                <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center">
                         {form[0].formName}
-                    </h1>
-                </div>
+                </h1>
                 {form.map((fields) => <div><FieldBuilder {...fields} /></div>)}
             </WrappedForm>
 
