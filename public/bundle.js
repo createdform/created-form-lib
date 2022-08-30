@@ -1954,7 +1954,7 @@
       className: "p-8 h-screen bg-orange-200"
     }, /* @__PURE__ */ React.createElement("form", {
       method: "post",
-      action: "http://localhost:3000/api/submission/create"
+      action: "https://createdform.com/api/submission/create"
     }, children, /* @__PURE__ */ React.createElement("div", {
       className: "bg-white p-4 rounded flex justify-center w-full"
     }, /* @__PURE__ */ React.createElement("button", {
