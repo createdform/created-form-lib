@@ -11,13 +11,15 @@ export enum FieldTypes {
     boolean = 'boolean',
     shortAnswer = 'ShortAnswer',
     starRating = 'StarRating',
-    textfield = 'textfield'
+    textfield = 'textfield',
+    formId = 'formId'
 }
 
 
 export type FormBuilderValues = {
     id: string;
     formName: string;
+    value?: string;
     fieldName: string;
     fieldType: FieldTypes;
     fieldHint?: string;

@@ -1,6 +1,7 @@
 import {FieldTypes, FormBuilderValues} from './App';
 import {ShortAnswerInput} from '../components/ShortAnswerInput';
 import {BooleanInput, NumberInput, TextFieldInput} from '../components';
+import FormIdField from '../components/FormIdField';
 
 const FieldBuilder = (field: FormBuilderValues): JSX.Element => {
     if (field) {
@@ -18,7 +19,7 @@ const FieldBuilder = (field: FormBuilderValues): JSX.Element => {
             case FieldTypes.starRating:
                 break;
             default:
-                return NumberInput(field);
+                return FormIdField(field);
         }
     }
     return <></>;
