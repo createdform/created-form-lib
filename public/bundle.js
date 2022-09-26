@@ -1983,7 +1983,9 @@
   var elementContainer = document.querySelector("#form_container");
   var Props = JSON.parse(elementContainer.getAttribute("props"));
   var App = ({ form }) => {
-    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
+    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "h-screen bg-primary bg-orange-200"
+    }, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
       className: "font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center"
     }, form[0].formName), /* @__PURE__ */ import_react.default.createElement("div", null, form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
       ...fields
@@ -1992,7 +1994,7 @@
     }, /* @__PURE__ */ import_react.default.createElement("button", {
       type: "submit",
       className: "bg-blue-500 hover:bg-blue-300 text-white p-2 px-6 rounded"
-    }, "Submit"))));
+    }, "Submit")))));
   };
   var App_default = App;
   var rootEl = ReactDOM.createRoot(elementContainer);
