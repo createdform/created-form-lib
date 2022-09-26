@@ -36,7 +36,7 @@ const Props = JSON.parse(elementContainer.getAttribute('props') as string);
 const App = ({form}: AppProps) => {
     return (
         <>
-            <div className="h-screen bg-primary bg-orange-200">
+            <div className="h-full bg-primary bg-orange-200">
                 <WrappedForm>
                     <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center">
                         {form[0].formName}
