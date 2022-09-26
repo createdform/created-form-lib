@@ -1921,6 +1921,15 @@
     className: "w-full border border-gray-200 rounded p-2"
   }), /* @__PURE__ */ React.createElement("div", null, field.fieldHint));
 
+  // src/components/FormIdField.tsx
+  var FormIdField = (field) => /* @__PURE__ */ React.createElement("input", {
+    type: "text",
+    name: field.fieldName,
+    className: "invisible w-full border border-gray-200 rounded p-2",
+    value: field.value
+  });
+  var FormIdField_default = FormIdField;
+
   // src/page/FieldBuilder.tsx
   var FieldBuilder = (field) => {
     if (field) {
@@ -1938,7 +1947,7 @@
         case "StarRating" /* starRating */:
           break;
         default:
-          return NumberInput(field);
+          return FormIdField_default(field);
       }
     }
     return /* @__PURE__ */ React.createElement(React.Fragment, null);
@@ -1973,6 +1982,7 @@
     FieldTypes2["shortAnswer"] = "ShortAnswer";
     FieldTypes2["starRating"] = "StarRating";
     FieldTypes2["textfield"] = "textfield";
+    FieldTypes2["formId"] = "formId";
     return FieldTypes2;
   })(FieldTypes || {});
   var elementContainer = document.querySelector("#form_container");

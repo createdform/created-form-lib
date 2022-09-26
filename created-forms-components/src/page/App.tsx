@@ -37,10 +37,19 @@ const App = ({form}: AppProps) => {
     return (
         <>
             <WrappedForm>
-                <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center">
+                    <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center">
                         {form[0].formName}
-                </h1>
-                {form.map((fields) => <div><FieldBuilder {...fields} /></div>)}
+                    </h1>
+
+                    <div>
+                        {form.map((fields) => <div><FieldBuilder {...fields} /></div>)}
+                    </div>
+
+                    <div className="bg-white p-4 rounded flex justify-center w-full">
+                        <button type="submit" className="bg-blue-500 hover:bg-blue-300 text-white p-2 px-6 rounded">
+                            Submit
+                        </button>
+                    </div>
             </WrappedForm>
 
         </>
