@@ -1956,19 +1956,6 @@
 
   // src/page/App.tsx
   var import_react = __toESM(require_react());
-
-  // src/components/utilities/WrappedForm.tsx
-  var WrappedForm = ({ children }) => {
-    return /* @__PURE__ */ React.createElement("div", {
-      className: "p-8 h-full bg-orange-200"
-    }, /* @__PURE__ */ React.createElement("form", {
-      method: "post",
-      action: "https://createdform.com/api/submission/create"
-    }, children));
-  };
-  var WrappedForm_default = WrappedForm;
-
-  // src/page/App.tsx
   var el = import_react.default.createElement;
   var FieldTypes = /* @__PURE__ */ ((FieldTypes2) => {
     FieldTypes2["number"] = "number";
@@ -1984,17 +1971,49 @@
   var Props = JSON.parse(elementContainer.getAttribute("props"));
   var App = ({ form }) => {
     return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", {
-      className: "h-full bg-primary bg-orange-200"
-    }, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
-      className: "font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center"
-    }, form[0].formName), /* @__PURE__ */ import_react.default.createElement("div", null, form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
+      className: "h-full "
+    }, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-container"
+    }, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-bar",
+      id: "progress-bar"
+    })), /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "branding"
+    }, /* @__PURE__ */ import_react.default.createElement("p", null, "Built with"), /* @__PURE__ */ import_react.default.createElement("img", {
+      src: "./Logo.svg",
+      alt: "created form"
+    })), /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-buttons flex"
+    }, /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "#section-1",
+      id: "back",
+      className: "button round minimal",
+      title: "back"
+    }, /* @__PURE__ */ import_react.default.createElement("img", {
+      className: "child",
+      src: "./arrow-circle-right.svg",
+      alt: "back button"
+    })), /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "#section-2",
+      id: "forward",
+      className: "button round minimal",
+      title: "forward"
+    }, /* @__PURE__ */ import_react.default.createElement("img", {
+      id: "forward-button",
+      className: "child",
+      src: "./arrow-circle-right.svg",
+      alt: "forward button"
+    }), /* @__PURE__ */ import_react.default.createElement("p", {
+      id: "forward-button-final",
+      className: "final hidden"
+    }, "\u{1F389}"))), form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("section", {
+      className: "landing-page",
+      id: "section-1"
+    }, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "field-padding"
+    }, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
       ...fields
-    })))), /* @__PURE__ */ import_react.default.createElement("div", {
-      className: "bg-white p-4 rounded flex justify-center w-full"
-    }, /* @__PURE__ */ import_react.default.createElement("button", {
-      type: "submit",
-      className: "bg-blue-500 hover:bg-blue-300 text-white p-2 px-6 rounded"
-    }, "Submit")))));
+    })))))));
   };
   var App_default = App;
   var rootEl = ReactDOM.createRoot(elementContainer);

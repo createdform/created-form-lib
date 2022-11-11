@@ -1984,8 +1984,106 @@
   var Props = JSON.parse(elementContainer.getAttribute("props"));
   var App = ({ form }) => {
     return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", {
-      className: "h-full bg-primary bg-orange-200"
-    }, /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
+      className: "h-full "
+    }, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-container"
+    }, /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-bar",
+      id: "progress-bar"
+    })), /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "branding"
+    }, /* @__PURE__ */ import_react.default.createElement("p", null, "Built with"), /* @__PURE__ */ import_react.default.createElement("img", {
+      src: "./Logo.svg",
+      alt: "created form"
+    })), /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "progress-buttons flex"
+    }, /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "#section-1",
+      id: "back",
+      className: "button round minimal",
+      title: "back"
+    }, /* @__PURE__ */ import_react.default.createElement("img", {
+      className: "child",
+      src: "./arrow-circle-right.svg",
+      alt: "back button"
+    })), /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "#section-2",
+      id: "forward",
+      className: "button round minimal",
+      title: "forward"
+    }, /* @__PURE__ */ import_react.default.createElement("img", {
+      id: "forward-button",
+      className: "child",
+      src: "./arrow-circle-right.svg",
+      alt: "forward button"
+    }), /* @__PURE__ */ import_react.default.createElement("p", {
+      id: "forward-button-final",
+      className: "final hidden"
+    }, "\u{1F389}"))), /* @__PURE__ */ import_react.default.createElement("section", {
+      className: "landing-page",
+      id: "section-1"
+    }, /* @__PURE__ */ import_react.default.createElement("img", {
+      src: "./Logo.svg",
+      alt: "created form logo"
+    }), /* @__PURE__ */ import_react.default.createElement("h3", null, "Components project \u{1F527}")), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-2"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "Checkboxes"), /* @__PURE__ */ import_react.default.createElement("div", {
+      className: "checkbox-section"
+    }, /* @__PURE__ */ import_react.default.createElement("label", null, /* @__PURE__ */ import_react.default.createElement("input", {
+      type: "checkbox",
+      name: "checkbox"
+    }), "Checkbox"), /* @__PURE__ */ import_react.default.createElement("label", null, /* @__PURE__ */ import_react.default.createElement("input", {
+      type: "checkbox",
+      name: "checkbox-checked",
+      checked: true
+    }), "Checkbox - checked"), /* @__PURE__ */ import_react.default.createElement("label", {
+      className: "disabled"
+    }, /* @__PURE__ */ import_react.default.createElement("input", {
+      type: "checkbox",
+      name: "checkbox-disabled",
+      disabled: true
+    }), "Checkbox Disabled"), /* @__PURE__ */ import_react.default.createElement("label", {
+      className: "disabled"
+    }, /* @__PURE__ */ import_react.default.createElement("input", {
+      type: "checkbox",
+      name: "checkbox-disabled-checked",
+      checked: true,
+      disabled: true
+    }), "Checkbox Disabled - checked"))), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-3"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "Text Inputs"), /* @__PURE__ */ import_react.default.createElement("input", {
+      type: "text",
+      id: "name",
+      name: "name",
+      required: true,
+      minLength: 4,
+      maxLength: 8,
+      size: 10
+    })), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-4"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "Section 4")), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-5",
+      className: "image-background"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "Section 5")), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-6"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "Almost There!"), /* @__PURE__ */ import_react.default.createElement("img", {
+      className: "form-image",
+      src: "https://media4.giphy.com/media/gHPX9jr3T3nHTE4dZh/giphy.gif?cid=ecf05e472v9v7sk2vd02o71kypi1o42pje0dl8hyxnfp5i3s&rid=giphy.gif&ct=g",
+      width: "480",
+      height: "270"
+    }), /* @__PURE__ */ import_react.default.createElement("p", null, "I want to add the ", /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "https://developers.giphy.com/docs/api",
+      target: "_blank",
+      className: "link"
+    }, "Giphy api"), " and maybe the ", /* @__PURE__ */ import_react.default.createElement("a", {
+      href: "https://www.pexels.com/api/",
+      target: "_blank",
+      className: "link"
+    }, "pexels api."), " So then people can easily add gifs and images to their forms")), /* @__PURE__ */ import_react.default.createElement("section", {
+      id: "section-7"
+    }, /* @__PURE__ */ import_react.default.createElement("h1", null, "\u{1F973}"), /* @__PURE__ */ import_react.default.createElement("h2", null, "Woohooo!"), /* @__PURE__ */ import_react.default.createElement("p", null, "You finished the form."), /* @__PURE__ */ import_react.default.createElement("canvas", {
+      id: "confetti-canvas"
+    })), /* @__PURE__ */ import_react.default.createElement(WrappedForm_default, null, /* @__PURE__ */ import_react.default.createElement("h1", {
       className: "font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 bg-white rounded text-center"
     }, form[0].formName), /* @__PURE__ */ import_react.default.createElement("div", null, form.map((fields) => /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement(FieldBuilder_default, {
       ...fields
