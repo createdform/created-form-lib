@@ -1934,17 +1934,17 @@
   var FieldBuilder = (field) => {
     if (field) {
       switch (field.fieldType) {
-        case "boolean" /* boolean */:
+        case "Boolean" /* boolean */:
           return BooleanInput(field);
-        case "dropdown" /* dropdown */:
+        case "Drop Down" /* dropdown */:
           break;
-        case "textfield" /* textfield */:
+        case "Text Field" /* textfield */:
           return TextFieldInput(field);
-        case "ShortAnswer" /* shortAnswer */:
+        case "Short Answer" /* shortAnswer */:
           return ShortAnswerInput(field);
-        case "number" /* number */:
+        case "Number" /* number */:
           return NumberInput(field);
-        case "StarRating" /* starRating */:
+        case "Stars" /* starRating */:
           break;
         default:
           return FormIdField_default(field);
@@ -1958,12 +1958,12 @@
   var import_react = __toESM(require_react());
   var el = import_react.default.createElement;
   var FieldTypes = /* @__PURE__ */ ((FieldTypes2) => {
-    FieldTypes2["number"] = "number";
-    FieldTypes2["dropdown"] = "dropdown";
-    FieldTypes2["boolean"] = "boolean";
-    FieldTypes2["shortAnswer"] = "ShortAnswer";
-    FieldTypes2["starRating"] = "StarRating";
-    FieldTypes2["textfield"] = "textfield";
+    FieldTypes2["number"] = "Number";
+    FieldTypes2["dropdown"] = "Drop Down";
+    FieldTypes2["boolean"] = "Boolean";
+    FieldTypes2["shortAnswer"] = "Short Answer";
+    FieldTypes2["starRating"] = "Stars";
+    FieldTypes2["textfield"] = "Text Field";
     FieldTypes2["formId"] = "formId";
     return FieldTypes2;
   })(FieldTypes || {});
