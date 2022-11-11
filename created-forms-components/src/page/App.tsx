@@ -6,12 +6,12 @@ import React from 'react';
 import WrappedForm from '../components/utilities/WrappedForm';
 
 export enum FieldTypes {
-    number = 'number',
-    dropdown = 'dropdown',
-    boolean = 'boolean',
-    shortAnswer = 'ShortAnswer',
-    starRating = 'StarRating',
-    textfield = 'textfield',
+    number = 'Number',
+    dropdown = 'Drop Down',
+    boolean = 'Boolean',
+    shortAnswer = 'Short Answer',
+    starRating = 'Stars',
+    textfield = 'Text Field',
     formId = 'formId'
 }
 
